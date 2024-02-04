@@ -10,7 +10,7 @@ import { SurveyContext } from "@/providers/SurveyProvider";
 import StepBar from "@/components/StepBar";
 
 export default function Home() {
-  const questionsArray: ReactElement[] = [<Question1 />, <Question2 />, <Question3 />]
+  const questionsArray: ReactElement[] = [<Question1 key={1} />, <Question2 key={2}/>, <Question3 key={3} />]
   // const [delta, setDelta] = useState(0)
 
   const { questions, currentQuestion, nextQuestion, previousQuestion, currentIndex, previousIndex, skipToQuestion } = useSurvey(questionsArray)
